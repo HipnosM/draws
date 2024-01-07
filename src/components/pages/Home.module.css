@@ -1,0 +1,29 @@
+.draw {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #333;
+}
+
+.draw img {
+    max-width: 500px;
+    border: 5px inset #222;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.content .draw_name {
+    font-size: 1.8rem;
+    color: #F7F7F7;
+    margin-bottom: 1rem;
+}
+.content p {
+    font-size: 1.6rem;
+    color: #d4d4d4;
+}
