@@ -29,28 +29,13 @@ export default function DrawLayout() {
     }, []);
 
     const handlePrev = () => {
-        setDrawIndex((prevIndex) => (prevIndex === 0 ? draws.length - 1 : prevIndex - 1));
+        setDrawIndex((prevIndex) => (prevIndex === 0 ? prevIndex : prevIndex - 1));
     };
 
     const handleNext = () => {
-        setDrawIndex((prevIndex) => (prevIndex === draws.length - 1 ? 0 : prevIndex + 1));
+        setDrawIndex((prevIndex) => (prevIndex === draws.length -2 ? prevIndex : prevIndex + 1));
+        console.log(drawIndex)
     };
-
-
-    useEffect(() => {
-        const carousel = document.querySelector(`.${styles.carousel}`);
-
-        carousel.addEventListener('transitionend', () => {
-            console.log('Transição concluída');
-        });
-
-        return () => {
-            // Remova o ouvinte de evento ao desmontar o componente, se necessário
-            carousel.removeEventListener('transitionend', () => {
-                console.log('Transição concluída');
-            });
-        };
-    }, []);
 
     return (
         <div className={styles.draw}>
