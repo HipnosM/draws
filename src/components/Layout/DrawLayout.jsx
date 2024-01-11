@@ -24,7 +24,6 @@ export default function DrawLayout() {
             .then((resp) => resp.json())
             .then((data) => {
                 setDraws(data.data);
-                // console.log(data.data);
             })
     }, []);
 
@@ -34,7 +33,6 @@ export default function DrawLayout() {
 
     const handleNext = () => {
         setDrawIndex((prevIndex) => (prevIndex === draws.length -2 ? prevIndex : prevIndex + 1));
-        console.log(drawIndex)
     };
 
     return (
