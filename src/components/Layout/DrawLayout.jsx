@@ -11,7 +11,8 @@ export default function DrawLayout() {
 
     const campos = "id,media_type,media_url,caption";
     const limit = 20;
-    const appUrl = `https://graph.instagram.com/me/media?fields=${campos}&access_token=${import.meta.env.VITE_INSTAGRAM_TOKEN}&limit=${limit}`;
+    const token = import.meta.env.VITE_INSTAGRAM_TOKEN
+    const appUrl = `https://graph.instagram.com/me/media?fields=${campos}&access_token=${token}&limit=${limit}`;
 
     useEffect(() => {
         fetch(appUrl, {
@@ -33,14 +34,8 @@ export default function DrawLayout() {
 
     const handleNext = () => {
         setDrawIndex((prevIndex) => (prevIndex === draws.length - 1 ? 0 : prevIndex + 1));
-        forceLayoutUpdate()
     };
 
-    const forceLayoutUpdate = () => {
-        const carousel = document.querySelector(`.${styles.carousel}`);
-        carousel.offsetWidth; // Força uma atualização do layout
-        console.log('Layout updated.');
-    };
 
     useEffect(() => {
         const carousel = document.querySelector(`.${styles.carousel}`);

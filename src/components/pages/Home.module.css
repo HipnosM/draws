@@ -1,12 +1,10 @@
 .draw {
     background-color: #333;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100vw;
-    min-height: 95vh;
 }
 
 .carousel {
@@ -27,6 +25,7 @@
 
 .draw img {
     width: 500px;
+    height: fit-content;
     border: 5px inset #222;
     margin-bottom: 1rem;
 }
@@ -42,21 +41,19 @@
     color: #d4d4d4;
 }
 
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
 .prevButton,
 .nextButton {
     font-size: 5rem;
-
-    position: absolute;
-    bottom: 2.5%;
-
     cursor: pointer;
-}
-
-.prevButton {
-    left: calc(50% - 10rem);
-}
-.nextButton {
-    right: calc(50% - 10rem);
+    margin: 2rem 0;
 }
 
 @media (max-width: 50rem) {
