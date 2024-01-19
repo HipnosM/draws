@@ -24,17 +24,20 @@
 }
 
 .draw img {
-    width: 500px;
+    max-width: 500px;
     height: fit-content;
     border: 5px inset #222;
     margin-bottom: 1rem;
 }
 
 .content .draw_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.8rem;
     color: #F7F7F7;
     margin-bottom: 1rem;
-    
+    gap: 1rem;
 }
 .content p {
     font-size: 1.6rem;
@@ -63,6 +66,17 @@
 
 .fade:not(.active) {
     opacity: 0;
+}
+
+a svg {
+    color: #d4d4d4;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    font-size: 3rem;
+    border-radius: 20%;
+}
+
+a:active {
+    color: #d4d4d4;
 }
 
 @media (max-width: 50rem) {

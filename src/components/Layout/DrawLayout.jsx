@@ -32,7 +32,7 @@ export default function DrawLayout() {
     };
 
     const handleNext = () => {
-        setDrawIndex((prevIndex) => (prevIndex === draws.length -2 ? prevIndex : prevIndex + 1));
+        setDrawIndex((prevIndex) => (prevIndex === draws.length - 2 ? prevIndex : prevIndex + 1));
     };
 
     return (
