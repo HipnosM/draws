@@ -32,6 +32,7 @@ Certifique-se de ter o Node.js instalado em seu ambiente.
 3. Instale as dependências:
    ```bash
    npm install
+   npm install react-icons
    ```
 4. Inicie o servidor de desenvolvimento:
    ```bash
